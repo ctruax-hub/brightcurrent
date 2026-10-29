@@ -41,10 +41,12 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
 .hero-grid, .feature-grid, .stain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 .feature-art svg, .stain-art svg { width: 100%; height: auto; display: block; }
 
-.hero { position: relative; background: #e9e3d6; }
-.hero-img { display: block; width: 100%; height: auto; }
-.hero-copy { position: absolute; top: 50%; right: 6%; transform: translateY(-50%); width: 40%; }
-.photo { width: 100%; height: auto; border-radius: var(--radius); display: block; }
+/* Hero: fixed-height banner, photo fills it, text sits in the empty right side */
+.hero { position: relative; background: #e9e3d6; height: clamp(420px, 40vw, 580px); overflow: hidden; }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left 85%; }
+.hero-wrap { position: relative; height: 100%; display: flex; align-items: center; justify-content: flex-end; }
+.hero-copy { width: min(46%, 480px); }
+.photo { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: var(--radius); display: block; }
 .logo img { display: block; height: 56px; width: auto; }
 .promo { background: var(--blue); color: #fff; padding: 40px 0; }
 .promo .btn-outline { color: #fff; border-color: #fff; }
@@ -93,7 +95,12 @@ label { font-weight: 700; }
 .agent-panel { position: fixed; right: 24px; bottom: 96px; width: 300px; background: #fff; border-radius: var(--radius); padding: 18px; box-shadow: 0 6px 24px rgba(0,0,0,.25); z-index: 50; font-size: .9rem; }
 
 @media (max-width: 860px) {
-  .hero-copy { position: static; transform: none; width: auto; padding: 24px 20px 32px; }
+  .family-strip ul, .region { display: none; }
+  .header-tools a { white-space: nowrap; }
+  .hero { height: auto; }
+  .hero-img { position: static; height: 240px; }
+  .hero-wrap { display: block; }
+  .hero-copy { width: auto; padding: 24px 0 32px; }
   .nav { display: none; }
   .hero-grid, .feature-grid, .stain-grid, .promo-grid, .find-grid, .learn-grid { grid-template-columns: 1fr; }
   .card-row, .footer-grid { grid-template-columns: 1fr 1fr; }
