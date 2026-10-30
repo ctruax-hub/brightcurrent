@@ -48,9 +48,9 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
 .hero-copy { width: min(46%, 480px); }
 .photo { width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: var(--radius); display: block; }
 .logo img { display: block; height: 56px; width: auto; }
-.promo { background: var(--blue); color: #fff; padding: 40px 0; }
-.promo .btn-outline { color: #fff; border-color: #fff; }
-.promo .btn-outline:hover { background: #fff; color: var(--blue-dark); }
+.promo { background: var(--amber); color: var(--ink); padding: 40px 0; }
+.promo .btn-outline { color: var(--ink); border-color: var(--ink); }
+.promo .btn-outline:hover { background: var(--ink); color: #fff; }
 .promo-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: end; }
 .fine { font-size: .75rem; opacity: .85; }
 
