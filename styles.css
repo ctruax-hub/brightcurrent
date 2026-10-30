@@ -102,3 +102,5 @@ label { font-weight: 700; }
   .hero-grid, .feature-grid, .stain-grid, .promo-grid, .find-grid, .learn-grid { grid-template-columns: 1fr; }
   .card-row, .footer-grid { grid-template-columns: 1fr 1fr; }
 }
+
+.legal-page { max-width: 760px; padding-top: 40px; padding-bottom: 64px; }
