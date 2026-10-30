@@ -32,10 +32,3 @@ select.addEventListener("change", () => {
   blob.setAttribute("fill", entry[0]);
   tip.textContent = entry[1];
 });
-
-// Agent launcher placeholder toggle.
-const launcher = document.getElementById("agent-launcher");
-const panel = document.getElementById("agent-panel");
-launcher.addEventListener("click", () => {
-  panel.hidden = !panel.hidden;
-});
